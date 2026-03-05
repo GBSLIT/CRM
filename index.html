@@ -561,13 +561,13 @@ function LoginPage({ onSignIn, error }) {
     <div className="login-wrap">
       <div className="login-card">
         <div style={{display:'flex', justifyContent:'space-between', alignItems:'center', marginBottom:12}}>
-          <div style={{fontSize:20,fontWeight:700}}>Employee Dashboard</div>
+<div style={{fontSize:20,fontWeight:700}}>GBSL CRM</div>
           <div style={{color:'var(--muted)',fontSize:13}}>Sign in with Microsoft 365</div>
         </div>
 
         <h2 style={{marginTop:6}}>Sign in</h2>
         <p className="small">
-          Global Base — Employee Dashboard
+          Global Base — CRM System
         </p>
 
         {error && (
@@ -775,13 +775,12 @@ async function loadLiveDataFor(userEmail) {
 
       // Clear app state locally (React)
       setUser(null);
-      setCurrentEmployee(null);
-      setContacts([]);
+            setContacts([]);
 setDeals([]);
 setActivities([]);
 setTasks([]);
 setCampaigns([]);
-      setActiveTab('Attendance');
+     setActiveTab('Dashboard');
 
       // Clear any helper pointer used by auto-refresh
       window.currentSignedInEmailForAutoRefresh = null;
@@ -814,7 +813,11 @@ setCampaigns([]);
       // ensure local UI cleared even if logout call failed
       setUser(null);
       setCurrentEmployee(null);
-      setEmployees([]); setAttendance([]); setLeaves([]); setWeeklyAgenda([]);
+     setContacts([]);
+setDeals([]);
+setActivities([]);
+setTasks([]);
+setCampaigns([]);
       setActiveTab('Attendance');
       window.currentSignedInEmailForAutoRefresh = null;
       try { stopAutoRefresh(); } catch(e){ }
@@ -843,7 +846,7 @@ const employee = null;
             <img src="gbsl.png" alt="Global Base" className="logo-img" />
             <span></span>
           </div>
-          <div className="muted">Employee Dashboard</div>
+         <div className="muted">CRM System</div>
         </div>
 
         <div className="nav" style={{marginTop:12}}>
@@ -919,3 +922,4 @@ ReactDOM.createRoot(document.getElementById("root")).render(<App />);
 
 </body>
 </html>
+
